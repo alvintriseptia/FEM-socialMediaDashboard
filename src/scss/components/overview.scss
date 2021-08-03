@@ -1,0 +1,58 @@
+@use '../util' as *;
+
+.green {
+  color: var(--limeGreen);
+}
+.red {
+  color: var(--brightRed);
+}
+
+.main__overview {
+  display: flex;
+  justify-content: center;
+  gap: rem(20);
+  flex-wrap: wrap;
+  & .overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: rem(10);
+    row-gap: rem(10);
+    width: rem(230);
+    height: rem(100);
+    padding: rem(15);
+    & .overview__header {
+      display: flex;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      column-gap: rem(5);
+      & p {
+        font-size: rem(14);
+        font-weight: 600;
+      }
+      & img {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+    & .overview__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & h4 {
+        font-size: rem(32);
+      }
+      & .stats {
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(5);
+        letter-spacing: 0.2px;
+        font-weight: 700;
+        font-size: rem(12);
+      }
+    }
+  }
+}

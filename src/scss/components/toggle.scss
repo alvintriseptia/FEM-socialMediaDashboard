@@ -1,0 +1,55 @@
+@use '../util' as *;
+
+@keyframes slidein {
+  from {
+    left: 2px;
+  }
+
+  to {
+    left: 28px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 28px;
+  }
+
+  to {
+    left: 2px;
+  }
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+  & .btn {
+    border: none;
+    width: rem(50);
+    height: rem(25);
+    border-radius: 30px;
+    background-color: var(--toggle);
+    position: relative;
+    cursor: pointer;
+    & .circle {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: rem(20);
+      height: rem(20);
+      border-radius: 50%;
+      background-color: var(--toggle-bg-start);
+      animation-duration: 0.2s;
+      animation-name: slideout;
+      &.is__dark {
+        animation-duration: 0.2s;
+        animation-name: slidein;
+        left: auto;
+        right: 2px;
+        background-color: var(--toggle-bg-end);
+      }
+    }
+  }
+}

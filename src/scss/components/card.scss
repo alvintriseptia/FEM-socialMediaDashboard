@@ -1,0 +1,83 @@
+@use '../util' as *;
+
+.facebook {
+  border-top: rem(5) solid var(--facebook);
+}
+.twitter {
+  border-top: rem(5) solid var(--twitter);
+}
+.youtube {
+  border-top: rem(5) solid var(--youtube);
+}
+.instagram {
+  border-top: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    var(--instagramStart),
+    var(--instagramEnd)
+  );
+}
+
+.green {
+  color: var(--limeGreen);
+}
+.red {
+  color: var(--brightRed);
+}
+
+.main__card {
+  display: flex;
+  justify-content: center;
+  gap: rem(20);
+  flex-wrap: wrap;
+  margin-top: rem(-100);
+  & .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: rem(5);
+    row-gap: rem(10);
+    width: rem(230);
+    padding: rem(20);
+    & .profile {
+      display: flex;
+      align-items: center;
+      column-gap: rem(5);
+      & img {
+        width: rem(20);
+        height: rem(20);
+      }
+
+      & .user {
+        font-size: rem(12);
+        font-weight: 600;
+      }
+    }
+
+    & .followers {
+      text-align: center;
+      & h2 {
+        font-size: rem(48);
+        font-weight: 700;
+        margin: 0;
+      }
+      & p {
+        letter-spacing: rem(2);
+        margin: 0;
+      }
+    }
+
+    & .stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: rem(5);
+      margin-top: 1rem;
+      letter-spacing: 0.2px;
+      font-weight: 700;
+      font-size: rem(12);
+    }
+  }
+}

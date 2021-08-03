@@ -1,0 +1,70 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter);
+  font-size: rem(14);
+  color: var(--light-text-primary);
+  background: var(--light-bg);
+  transition: 0.3s;
+  & h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  & h1,
+  h2,
+  h4 {
+    color: var(--light-text-secondary);
+  }
+
+  & .card,
+  .overview {
+    background: var(--light-card);
+  }
+
+  &.dark {
+    background: var(--dark-bg);
+    color: var(--dark-text-primary);
+    transition: 0.3s;
+    & h1,
+    h2,
+    h4 {
+      color: var(--dark-text-secondary);
+    }
+    & .card,
+    .overview {
+      background: var(--dark-card);
+    }
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 0.6rem;
+  }
+}

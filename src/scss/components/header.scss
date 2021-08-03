@@ -1,0 +1,29 @@
+@use '../util' as *;
+body {
+  & header {
+    background: var(--light-top-bg);
+  }
+}
+body.dark {
+  & header {
+    background: var(--dark-top-bg);
+  }
+}
+header {
+  height: rem(250);
+  & .header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    & .title {
+      & h1 {
+        margin-bottom: rem(4);
+      }
+      & p {
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+  }
+}
