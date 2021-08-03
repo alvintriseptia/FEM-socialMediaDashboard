@@ -1,6 +1,7 @@
 const profile = [
   {
     border: "facebook",
+    alt: "facebook",
     sosmed: "./images/icon-facebook.svg",
     user: "@nathanf",
     followers: "1987",
@@ -11,6 +12,7 @@ const profile = [
   },
   {
     border: "twitter",
+    alt: "twitter",
     sosmed: "./images/icon-twitter.svg",
     user: "@nathanf",
     followers: "1044",
@@ -21,6 +23,7 @@ const profile = [
   },
   {
     border: "instagram",
+    alt: "instagram",
     sosmed: "./images/icon-instagram.svg",
     user: "@realnathanf",
     followers: "11k",
@@ -31,6 +34,7 @@ const profile = [
   },
   {
     border: "youtube",
+    alt: "youtube",
     sosmed: "./images/icon-youtube.svg",
     user: "Nathan F.",
     followers: "1987",
@@ -44,6 +48,7 @@ const profile = [
 const overview = [
   {
     sosmed: "./images/icon-facebook.svg",
+    alt: "facebook",
     name: "Page Views",
     number: "87",
     stats: "3",
@@ -52,6 +57,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-facebook.svg",
+    alt: "facebook",
     name: "Likes",
     number: "52",
     stats: "2",
@@ -60,6 +66,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-instagram.svg",
+    alt: "instagram",
     name: "Likes",
     number: "5462",
     stats: "2257",
@@ -68,6 +75,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-instagram.svg",
+    alt: "instagram",
     name: "Profile Views",
     number: "52k",
     stats: "1375",
@@ -76,6 +84,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-twitter.svg",
+    alt: "twitter",
     name: "Retweets",
     number: "117",
     stats: "303",
@@ -84,6 +93,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-twitter.svg",
+    alt: "twitter",
     name: "Likes",
     number: "507",
     stats: "553",
@@ -92,6 +102,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-youtube.svg",
+    alt: "youtube",
     name: "Likes",
     number: "107",
     stats: "19",
@@ -100,6 +111,7 @@ const overview = [
   },
   {
     sosmed: "./images/icon-youtube.svg",
+    alt: "youtube",
     name: "Towal Views",
     number: "1407",
     stats: "12",
@@ -123,7 +135,7 @@ profile.map((item) => {
   html += `
     <div class="card ${item.border}">
         <div class="profile">
-            <img src=${item.sosmed} />
+            <img src=${item.sosmed} alt=${item.alt} />
             <p class="user">${item.user}</p>
         </div>
         <div class="followers">
@@ -131,7 +143,7 @@ profile.map((item) => {
             <p>${item.nameFollowers}</p>
         </div>
         <div class="stats">
-            <img src="${item.statsImg}" />
+            <img src="${item.statsImg}" alt="arrow" />
             <span class=${item.statsColor}>${item.stats} Today</span>
         </div>
     </div>
@@ -148,12 +160,12 @@ overview.map((item) => {
     <div class="overview">
         <div class="overview__header">
             <p>${item.name}</p>
-            <img src=${item.sosmed} />
+            <img src=${item.sosmed} alt=${item.alt} />
         </div>
         <div class="overview__body">
             <h4>${item.number}</h4>
             <div class="stats">
-                <img src=${item.statsImg} />
+                <img src=${item.statsImg} alt="arrow" />
                 <span class="${item.statsColor}">${item.stats}</span>
             </div>
         </div>

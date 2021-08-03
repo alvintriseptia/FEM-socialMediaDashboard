@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -31,6 +33,7 @@ body {
   & .card,
   .overview {
     background: var(--light-card);
+    width: rem(230);
   }
 
   &.dark {
@@ -66,5 +69,10 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     margin: 0 0.6rem;
+  }
+
+  body .card,
+  .overview {
+    width: 70%;
   }
 }
